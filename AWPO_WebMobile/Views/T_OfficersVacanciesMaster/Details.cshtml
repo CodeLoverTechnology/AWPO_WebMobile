@@ -1,0 +1,147 @@
+﻿@model AWPO_WebMobile.DbModel.T_OfficersVacanciesMaster
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>T_OfficersVacanciesMaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TypOfVacancy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypOfVacancy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoOfPost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoOfPost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Post)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Post)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Exam_InterviewDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Exam_InterviewDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OfficersVacancyID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,89 @@
+﻿@model IEnumerable<AWPO_WebMobile.DbModel.T_OfficersVacanciesMaster>
+
+@{
+    ViewBag.Title = "Index Officers Vacancies";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index Officers Vacancies</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create_officers_Vacancies")
+</p>
+<table class="table table-striped table-hover table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOfPost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Exam_InterviewDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOfPost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Post)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Exam_InterviewDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit_officers_Vacancies", new { id = item.OfficersVacancyID }) |
+                @Html.ActionLink("Delete", "Delete_Officers_Vacancies", new { id = item.OfficersVacancyID })
+            </td>
+        </tr>
+    }
+</table>

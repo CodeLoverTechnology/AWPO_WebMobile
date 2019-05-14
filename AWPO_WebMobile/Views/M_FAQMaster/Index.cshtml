@@ -1,0 +1,41 @@
+﻿@model IEnumerable<AWPO_WebMobile.DbModel.M_FAQMaster>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>FAQ List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped table-hover table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Question)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Answer)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Question)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Answer)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.FAQID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.FAQID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.FAQID })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<AWPO_WebMobile.DbModel.M_ContactMaster>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h2>Index : <small>AWPO Contact Master</small></h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table table-striped table-hover table-bordered">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PlacementNode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelephoneNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PlacementNode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TelephoneNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ContactID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ContactID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

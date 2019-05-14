@@ -1,0 +1,48 @@
+﻿@model AWPO_WebMobile.DbModel.M_ContactMaster
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <h2>Delete : <small>Are you sure you want to delete this?</small></h2>
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.PlacementNode)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PlacementNode)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TelephoneNo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TelephoneNo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</div>
